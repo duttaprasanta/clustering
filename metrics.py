@@ -116,20 +116,25 @@ def silhouette_score(X,labels):
 
 
 # -------------------------------------------Jaccard Start ---------------------------------------
+# Jaccard index computation function
+# This function is different than sklearn's jaccard_score function as 
+# it can compute jaccard index even if two similar clusters has different labels
+# Input : two label array
+# Output : Jaccard index
 def jaccard_index(list1,list2):
-    uni_lab1 = list(set(list1))
-    uni_lab2 = list(set(list2))
+    uni_lab1 = list(set(list1)) # Getting unique labels
+    uni_lab2 = list(set(list2)) # Getting unique labels
     f = []
     for i,u1 in enumerate(uni_lab1):
         l = []
         for j,u2 in enumerate(uni_lab2):
-            s1 = set(np.where(list1==u1)[0])
-            s2 = set(np.where(list2==u2)[0])
-            iou = inter_over_union(s1,s2)
+            s1 = set(np.where(list1==u1)[0])    # Getting indices for a cluster label
+            s2 = set(np.where(list2==u2)[0])    # Getting indices for a cluster label
+            iou = inter_over_union(s1,s2)   # Calculating Jaccard index
             l.append((iou,i,j))
-        m = max(l)
+        m = max(l)  # Taking max. value
         f.append(m)
-    f.sort(reverse=True)
+    f.sort(reverse=True)    
     return f
                    
 def inter_over_union(s1,s2):
