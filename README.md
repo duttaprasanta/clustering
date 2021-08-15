@@ -1,4 +1,4 @@
-# About the repository
+# Clustering
 In this repository, the following classes and functions are implemented
 - [**KMeans** clustering](https://en.wikipedia.org/wiki/K-means_clustering) class
 - [**Agglomerative** clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering) class
