@@ -18,9 +18,9 @@ def export(filename, labels, foldername='.'):
         os.makedirs(foldername) # Creating specified folder
     except:
         pass
-    f = open(f'{foldername}/{filename}','w') # opening file
+    f = open(os.path.join(foldername,filename),'w') # opening file
     for c in clusters:
         f.write(str(c)[1:-1])   # Writing indices into file
         f.write('\n')   # Adding a newline after each line 
     f.close()   # Closing file
-    print(f'Exported successfully into {foldername}/{filename}')
+    print(f'Exported successfully into {os.path.join(foldername,filename)}')
