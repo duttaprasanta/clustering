@@ -29,10 +29,7 @@ pip install -r requirements.txt
 ```
 Deactivate all the activated environment before doing the previous step. In case of conda, deactivate it using `conda deactivate`. In case of pip, do `deactivate`.
 
-# LICENSE
-GNU Affero General Public License v3.0. See [LICENSE](https://github.com/duttaprasanta/clustering/blob/main/LICENSE) for more information
-
 # Useful links
+- Project website : [https://duttaprasanta.github.io/clustering/](https://duttaprasanta.github.io/clustering/)
+- Project link : [https://github.com/duttaprasanta/clustering](https://github.com/duttaprasanta/clustering)
 - Email : prasanta7dutta@gmail.com
-- Project link : https://github.com/duttaprasanta/clustering
-- Project site : https://duttaprasanta.github.io/clustering/
